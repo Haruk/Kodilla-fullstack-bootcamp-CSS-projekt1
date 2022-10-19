@@ -1,0 +1,60 @@
+// variables
+$primary-color: #05291d;
+$secondary-color: #fff9eb;
+$background-color-primary: #f5ead0;
+$background-color-secondary: #aaa56f;
+
+// Global
+*, *::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+   margin: 0; 
+   font-family: 'Montserrat', sans-serif;
+   color: $primary-color;
+   font-size: 16px;
+   line-height: 1.7;
+}
+
+.container {
+   max-width: 1140px;
+   padding: 0 20px;
+   
+}
+
+section {
+    padding: 96px 0;
+}
+
+// Navigation
+
+.navigation {
+    background-color: $background-color-secondary;
+    padding: 12px 0;
+
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+.navigation a:link {
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: $secondary-color;
+}
+
+.navigation ul ul li {
+    display: block;
+    margin-bottom: 12px;
+}
