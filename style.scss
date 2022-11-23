@@ -3,6 +3,7 @@ $primary-color: #05291d;
 $secondary-color: #fff9eb;
 $background-color-primary: #f5ead0;
 $background-color-secondary: #aaa56f;
+$font-main: 'Montserrat', sans-serif;
 
 // Global
 *, *::before, ::after {
@@ -11,7 +12,7 @@ $background-color-secondary: #aaa56f;
 
 body {
    margin: 0; 
-   font-family: 'Montserrat', sans-serif;
+   font-family: $font-main;
    color: $primary-color;
    font-size: 16px;
    line-height: 1.7;
@@ -59,25 +60,6 @@ section {
     margin-bottom: 12px;
 }
 
-/* variables */
-/* $primary-color: #05291d;
-$secondary-color: #fff9eb;
-$background-color-primary: #f5ead0;
-$background-color-secondary: #aaa56f; */
-
-
-/* main */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* utilities */
-
-
-
-/* navbar */
 
 /* header */
 
