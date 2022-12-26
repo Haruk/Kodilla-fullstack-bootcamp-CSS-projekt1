@@ -21,6 +21,10 @@ body {
    line-height: 1.7;
 }
 
+
+
+// Utilities
+
 ul {
   list-style: none;
 }
@@ -47,12 +51,10 @@ h3 {
   margin-bottom: 12px;
 }
 
-img {
-  width: 100%;
+h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
-
-
-// Utilities
 
 .button {
   display: block;
@@ -68,6 +70,9 @@ img {
   margin: 0;
 }
 
+.bold {
+  font-weight: 600;
+}
 // Hero section
 
 .hero {
@@ -168,7 +173,7 @@ img {
   transition: $transition;
 }
 
-/* services */
+/* services section*/
 
 .container {
   padding: 96px 15%;
@@ -200,9 +205,7 @@ img {
 }
 
 
-.content-list .bold {
-  font-weight: 600;
-}
+
 
 .content-list a {
   margin: 10px 0;
@@ -217,52 +220,113 @@ img {
   transition: $transition;
 }
 
+/*out work section */
+.wrapper-two {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.wrapper-two .work-list {
+  // position: relative;
+  min-height: 300px;
+  padding-bottom: 96px;
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.wrapper-two .work-list .work-info-img{
+  position: absolute;
+  width: 50%;
+  min-height: 360px;
+  
+}
+
+.wrapper-two .work-list .work-info-img img{
+  max-width: 250px;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.work-info-img::after {
+  background-color: $background-color-secondary;
+  opacity: 0.3;
+
+}
+
+.wrapper-two .work-list .work-info-text{
+  padding: 36px 0 36px 55%;
+  text-align: left;
+}
+
+.wrapper-two .work-list .work-info-text .btn-no-frame {
+  border: none;
+  padding: 0;
+  margin: 36px 0;
+  text-align: left;
+  color: $background-color-secondary;
+}
+
+.btn-no-frame a:hover {
+  color: $primary-color;
+}
+
+
 /* contact form */
+.contact-form {
+  background-color: $background-color-secondary;
+  
+}
+
+.contact-form h2 {
+  color: $secondary-color;
+}
+
 
 /* Style inputs */
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    background-color: $background-color-secondary;
+    border: 0px;
+    border-bottom: 3px solid $secondary-color;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
   }
   
   input[type=submit] {
-    background-color: $background-color-primary;
-    color: $primary-color;
+    color: $background-color-primary;
+    background-color: $background-color-secondary;
     padding: 12px 20px;
-    border: none;
+    border-color: $background-color-primary;
     cursor: pointer;
+    background-position: 100% 0; 
+    background-size: 300%;
+    transition: $transition;
   }
   
   input[type=submit]:hover {
-    background-color: $background-color-secondary;
-    color: $background-color-primary;
+    // background-color: $background-color-secondary;
+    color: $primary-color;
+    background-position: 0 100%;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
   }
   
-  // /* Style the container/contact section */
-  // .container {
-  //   border-radius: 5px;
-  //   background-color: #f2f2f2;
-  //   padding: 10px;
-  // }
+ 
   
   /* Create two columns that float next to eachother */
-  .column {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-    padding: 20px;
+  .column-one {
+    padding-right: 96px;
+    flex: 2 0 0;
   }
   
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  .column-two {
+    flex: 1 0 0;
   }
+
   
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
