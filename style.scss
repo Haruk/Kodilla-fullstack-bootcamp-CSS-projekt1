@@ -4,64 +4,160 @@ $secondary-color: #fff9eb;
 $background-color-primary: #f5ead0;
 $background-color-secondary: #aaa56f;
 $font-main: 'Montserrat', sans-serif;
+$transition: 0.5s;
 
 // Global
 *, *::before, ::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-   margin: 0; 
    font-family: $font-main;
    color: $primary-color;
+   background-color: #fff;
    font-size: 16px;
    line-height: 1.7;
 }
 
-.container {
-   max-width: 1140px;
-   padding: 0 20px;
-   
+ul {
+  list-style: none;
 }
 
-section {
-    padding: 96px 0;
+a {
+  text-decoration: none;
 }
+
+h1 {
+  font-weight: 400;
+  font-size: 72px;
+  color: $secondary-color;
+  line-height: 1.2;
+  
+}
+
+h2 {
+  font-size: 48px;
+  margin-bottom: 72px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+img {
+  width: 100%;
+}
+
+
+// Utilities
+
+.button {
+  display: block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+}
+
+// Hero section
+
+.hero {
+  background-color: $background-color-secondary;
+  display: block;
+  height: 500px;
+  padding: 15px 15%;
+}
+
 
 // Navigation
 
-.navigation {
-    background-color: $background-color-secondary;
-    padding: 12px 0;
+.navbar {
+  background-color: $background-color-secondary;
+  height: 70px;
+  font-size: 16px;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar a {
+  color: $secondary-color;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.navbar a:hover {
+  border-bottom: $secondary-color 2px solid;
 
 }
 
-.navigation ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
+// Navigation dropdown
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.navigation li {
-    display: inline-block;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $background-color-primary;
+  min-width: 120px;
+  z-index: 1;
 }
 
-.navigation a:link {
-    text-decoration: none;
+.dropdown-content a {
+  color: $primary-color;
+  text-decoration: none;
+  display: block;
 }
 
-.navigation a:hover {
-    background-color: $secondary-color;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
-
-.navigation ul ul li {
-    display: block;
-    margin-bottom: 12px;
-}
-
-
 /* header */
+
+.hero .content {
+  display: flex;
+
+}
+
+.content-inner {
+  margin: auto;
+  padding-top: 20px;
+}
+
+.content-inner span {
+  text-transform: uppercase;
+  color: $primary-color;
+  font-size: 55px;
+}
+
+.content-inner span:hover {
+  color: $secondary-color;
+  transition: $transition;
+}
+
+.btn-frame {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-frame:hover {
+  background-color: $background-color-primary;
+  transition: 0.5s;
+}
 
 /* section */
 
@@ -78,15 +174,16 @@ input[type=text], select, textarea {
   }
   
   input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+    background-color: $background-color-primary;
+    color: $primary-color;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
   }
   
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: $background-color-secondary;
+    color: $background-color-primary;
   }
   
   /* Style the container/contact section */
